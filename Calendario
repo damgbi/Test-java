@@ -1,0 +1,38 @@
+package com.mycompany.calendario;
+
+import java.util.Scanner;
+import java.util.Calendar;
+
+public class Calendario {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        Calendar c = Calendar.getInstance();
+        
+        int dia, mes, ano, y0, m0, d0, x;
+        
+        
+        System.out.println("Insira o dia: ");
+        dia = ler.nextInt();
+        System.out.println("Insira o mês: ");
+        mes = ler.nextInt();
+        System.out.println("Insira o ano: ");
+        ano = ler.nextInt();
+        
+        y0 = ano - (14 - mes) / 12;
+        
+        x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
+        
+        m0 = mes + 12 * ((14 - mes) / 12) - 2;
+        
+        d0 = (dia + x + 31 * m0 / 12) % 7;
+        
+        String[] diasDaSemana = {"Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"};
+        
+        System.out.println("O dia da semana é: " + diasDaSemana[d0]);
+    
+        
+        
+        
+    }
+}
