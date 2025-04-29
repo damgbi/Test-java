@@ -1,0 +1,24 @@
+public class SwitchData {
+    public static void converterData() {
+        
+        Scanner ler = new Scanner(System.in);
+        
+        System.out.println("Insira o dia: ");
+        int dia = ler.nextInt();
+        
+        System.out.println("Insira o mês: ");
+        int mes = ler.nextInt();
+        
+        System.out.println("Insira o ano: ");
+        int ano = ler.nextInt();
+        
+        String[] mesExtenso = {"invalido", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+        
+        System.out.println(dia + " de " + mesExtenso[mes] + " de " + ano);
+    }
+
+    public static void main(String[] args) {
+        converterData();
+        
+    }
+}
